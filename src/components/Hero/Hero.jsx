@@ -121,10 +121,10 @@ I'd like to make a booking/inquiry with the following details:
           className="w-full max-w-5xl bg-white rounded-2xl shadow-2xl p-2 md:p-4 mt-8"
         >
           {/* Form Fields */}
-          <form onSubmit={handleSearchSubmit} className="grid grid-cols-1 md:grid-cols-4 gap-4 p-2 relative">
+          <form onSubmit={handleSearchSubmit} className="grid grid-cols-1 md:grid-cols-12 gap-4 p-2 relative">
             
             {/* Destination Autocomplete */}
-            <div ref={dropdownRef} className="bg-slate-50 p-3 rounded-xl border border-gray-100 relative">
+            <div ref={dropdownRef} className="bg-slate-50 p-3 rounded-xl border border-gray-100 relative md:col-span-4">
               <label className="block text-xs font-semibold text-slate-500 mb-1">Destination</label>
               <div className="flex items-center">
                 <Map className="w-4 h-4 text-slate-400 mr-2" />
@@ -207,7 +207,7 @@ I'd like to make a booking/inquiry with the following details:
             </div>
             
             {/* Date Range Field */}
-            <div className="bg-slate-50 p-3 rounded-xl border border-gray-100 flex flex-col justify-between">
+            <div className="bg-slate-50 p-3 rounded-xl border border-gray-100 flex flex-col justify-between md:col-span-4">
               <label className="block text-xs font-semibold text-slate-500 mb-1">Travel Dates</label>
               <div className="flex items-center space-x-2">
                 <Calendar className="w-4 h-4 text-slate-400 shrink-0" />
@@ -236,7 +236,7 @@ I'd like to make a booking/inquiry with the following details:
             <div 
               ref={travelersRef}
               onClick={() => setIsTravelersOpen(!isTravelersOpen)}
-              className="bg-slate-50 p-3 rounded-xl border border-gray-100 relative cursor-pointer select-none"
+              className="bg-slate-50 p-3 rounded-xl border border-gray-100 relative cursor-pointer select-none md:col-span-2"
             >
               <label className="block text-xs font-semibold text-slate-500 mb-1">Travelers</label>
               <div className="flex items-center">
@@ -313,7 +313,7 @@ I'd like to make a booking/inquiry with the following details:
             {/* Main Submit Button */}
             <button 
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold flex items-center justify-center py-3 transition-colors shadow-md shadow-blue-600/20"
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold flex items-center justify-center py-3 transition-colors shadow-md shadow-blue-600/20 md:col-span-2"
             >
               <Search className="w-5 h-5 mr-2" /> Search & Book
             </button>

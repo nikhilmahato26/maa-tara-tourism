@@ -34,7 +34,7 @@ export const CustomizedPackages = () => {
         >
           {customizedPackages.map((pkg) => (
             <SwiperSlide key={pkg.id}>
-              <PackageCard data={pkg} type="domestic" />
+              <PackageCard data={pkg} type="customized" hideDetails={true} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -71,28 +71,13 @@ export const InternationalPackages = () => {
             <span className="text-green-500 font-bold uppercase tracking-wider text-sm mb-2 block">Global Adventures</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">International Packages</h2>
           </div>
-          <button className="text-blue-600 font-semibold hover:text-blue-800 hidden md:block">View All International →</button>
         </div>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          className="pb-16"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {internationalPackages.map((pkg) => (
-            <SwiperSlide key={pkg.id}>
-              <PackageCard data={pkg} type="international" />
-            </SwiperSlide>
+            <PackageCard key={pkg.id} data={pkg} type="international" />
           ))}
-        </Swiper>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
 import Trust from '../components/About/Trust';
+import About from '../components/About/About';
 import { CustomizedPackages, FeaturedDomestic, InternationalPackages } from '../components/Packages/PackageSections';
 import Services from '../components/Services/Services';
 import WhyChooseUs from '../components/About/WhyChooseUs';
@@ -15,6 +16,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <Hero />
       <Trust />
+      <About />
       <CustomizedPackages />
       <InternationalPackages />
       <FeaturedDomestic />

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Plane, Building2, Map, Calendar, Users, Search } from 'lucide-react';
+import { Map, Calendar, Users, Search } from 'lucide-react';
 import heroBackground from '../../assets/hero_background.png';
+import { customizedPackages, internationalPackages, featuredDomestic } from '../../data/packages';
 
 const Hero = () => {
-  const [activeTab, setActiveTab] = useState('packages');
+  const allPackages = [...customizedPackages, ...internationalPackages, ...featuredDomestic];
+  const uniqueDestinations = [...new Set(allPackages.map(pkg => pkg.title))].sort();
 
   return (
     <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[90vh]">
@@ -49,35 +51,18 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full max-w-5xl bg-white rounded-2xl shadow-2xl p-2 md:p-4 mt-8"
         >
-          {/* Tabs */}
-          <div className="flex border-b border-gray-100 mb-4 overflow-x-auto hide-scrollbar">
-            <button 
-              onClick={() => setActiveTab('packages')}
-              className={`flex items-center px-6 py-3 font-semibold transition-colors ${activeTab === 'packages' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-blue-600'}`}
-            >
-              <Map className="w-5 h-5 mr-2" /> Packages
-            </button>
-            <button 
-              onClick={() => setActiveTab('flights')}
-              className={`flex items-center px-6 py-3 font-semibold transition-colors ${activeTab === 'flights' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-blue-600'}`}
-            >
-              <Plane className="w-5 h-5 mr-2" /> Flights
-            </button>
-            <button 
-              onClick={() => setActiveTab('hotels')}
-              className={`flex items-center px-6 py-3 font-semibold transition-colors ${activeTab === 'hotels' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-blue-600'}`}
-            >
-              <Building2 className="w-5 h-5 mr-2" /> Hotels
-            </button>
-          </div>
-
           {/* Form Fields */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-2">
             <div className="bg-slate-50 p-3 rounded-xl border border-gray-100">
               <label className="block text-xs font-semibold text-slate-500 mb-1">Destination</label>
               <div className="flex items-center">
                 <Map className="w-4 h-4 text-slate-400 mr-2" />
-                <input type="text" placeholder="Where to?" className="w-full bg-transparent outline-none font-medium text-slate-700" />
+                <select defaultValue="" className="w-full bg-transparent outline-none font-medium text-slate-700 cursor-pointer appearance-none">
+                  <option value="" disabled>Select a package</option>
+                  {uniqueDestinations.map((dest, idx) => (
+                    <option key={idx} value={dest}>{dest}</option>
+                  ))}
+                </select>
               </div>
             </div>
             

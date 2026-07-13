@@ -5,12 +5,12 @@ import heroBackground from '../../assets/hero_background.png';
 import { customizedPackages, internationalPackages, featuredDomestic } from '../../data/packages';
 
 const Hero = () => {
-  const dateInputRef = useRef(null);
   const dropdownRef = useRef(null);
   const travelersRef = useRef(null);
   
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDate, setSelectedDate] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
@@ -52,14 +52,16 @@ const Hero = () => {
   }, [adults, children]);
 
   const handleBookWhatsApp = (destinationName) => {
-    const formattedDate = selectedDate ? new Date(selectedDate).toLocaleDateString('en-IN') : 'Flexible';
+    const formattedStart = startDate ? new Date(startDate).toLocaleDateString('en-IN') : 'Flexible';
+    const formattedEnd = endDate ? new Date(endDate).toLocaleDateString('en-IN') : '';
+    const formattedDateRange = formattedEnd ? `${formattedStart} to ${formattedEnd}` : formattedStart;
     const formattedTravelers = getTravelersSummary();
     
     const textMessage = `Hello Maa Tara Tourism,
 
 I'd like to make a booking/inquiry with the following details:
 - *Destination:* ${destinationName}
-- *Date of Travel:* ${formattedDate}
+- *Dates of Travel:* ${formattedDateRange}
 - *Number of Travelers:* ${formattedTravelers}`;
 
     const url = `https://wa.me/919163264242?text=${encodeURIComponent(textMessage)}`;
@@ -204,30 +206,29 @@ I'd like to make a booking/inquiry with the following details:
               </AnimatePresence>
             </div>
             
-            {/* Date Field */}
-            <div 
-              onClick={() => {
-                if (dateInputRef.current) {
-                  try {
-                    dateInputRef.current.showPicker();
-                  } catch (e) {
-                    dateInputRef.current.focus();
-                  }
-                }
-              }}
-              className="bg-slate-50 p-3 rounded-xl border border-gray-100 cursor-pointer"
-            >
-              <label className="block text-xs font-semibold text-slate-500 mb-1">Date</label>
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 text-slate-400 mr-2" />
-                <input 
-                  ref={dateInputRef}
-                  type="date" 
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full bg-transparent outline-none font-medium text-slate-700 cursor-pointer"
-                  onClick={(e) => e.stopPropagation()}
-                />
+            {/* Date Range Field */}
+            <div className="bg-slate-50 p-3 rounded-xl border border-gray-100 flex flex-col justify-between">
+              <label className="block text-xs font-semibold text-slate-500 mb-1">Travel Dates</label>
+              <div className="flex items-center space-x-2">
+                <Calendar className="w-4 h-4 text-slate-400 shrink-0" />
+                <div className="flex items-center space-x-1 w-full text-slate-700">
+                  <input 
+                    type="date" 
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                    className="bg-transparent outline-none font-medium text-xs md:text-sm cursor-pointer w-full text-center"
+                    placeholder="Start"
+                  />
+                  <span className="text-slate-400 font-bold text-[10px]">to</span>
+                  <input 
+                    type="date" 
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    className="bg-transparent outline-none font-medium text-xs md:text-sm cursor-pointer w-full text-center"
+                    placeholder="End"
+                    min={startDate}
+                  />
+                </div>
               </div>
             </div>
 

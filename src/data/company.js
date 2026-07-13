@@ -23,7 +23,7 @@ export const companyInfo = {
   },
   stats: [
     { value: '20+', label: 'Years Experience' },
-    { value: '5000+', label: 'Happy Travelers' },
+    { value: '20000+', label: 'Happy Travelers' },
     { value: '100+', label: 'Tour Packages' },
     { value: '24×7', label: 'Customer Support' },
   ]

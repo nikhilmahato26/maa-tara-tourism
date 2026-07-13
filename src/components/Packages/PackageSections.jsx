@@ -53,14 +53,9 @@ export const FeaturedDomestic = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredDomestic.slice(0, 8).map((pkg) => (
+          {featuredDomestic.map((pkg) => (
             <PackageCard key={pkg.id} data={pkg} type="domestic" />
           ))}
-        </div>
-        <div className="mt-10 text-center">
-          <button className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full font-bold transition-colors">
-            Load More Packages
-          </button>
         </div>
       </div>
     </section>

@@ -65,32 +65,54 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-3 p-10">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Send us a Message</h3>
-            <form className="space-y-6">
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                const data = new FormData(e.target);
+                const firstName = data.get('firstName');
+                const lastName = data.get('lastName');
+                const email = data.get('email');
+                const phone = data.get('phone');
+                const msg = data.get('message');
+                
+                const formattedMessage = `Hello Maa Tara Tourism,
+
+I'd like to make an inquiry:
+- *Name:* ${firstName} ${lastName}
+- *Email:* ${email}
+- *Phone:* ${phone}
+- *Message:* ${msg}`;
+                
+                const url = `https://wa.me/919163264242?text=${encodeURIComponent(formattedMessage)}`;
+                window.open(url, '_blank');
+              }}
+              className="space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-slate-600 mb-2">First Name</label>
-                  <input type="text" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="John" />
+                  <input name="firstName" required type="text" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="John" />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-600 mb-2">Last Name</label>
-                  <input type="text" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="Doe" />
+                  <input name="lastName" required type="text" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="Doe" />
                 </div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-slate-600 mb-2">Email Address</label>
-                  <input type="email" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="john@example.com" />
+                  <input name="email" required type="email" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="john@example.com" />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-600 mb-2">Phone Number</label>
-                  <input type="tel" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="+91 98765 43210" />
+                  <input name="phone" required type="tel" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="+91 98765 43210" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-semibold text-slate-600 mb-2">Message</label>
-                <textarea rows="4" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="Tell us about your travel plans..."></textarea>
+                <textarea name="message" required rows="4" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors" placeholder="Tell us about your travel plans..."></textarea>
               </div>
 
               <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl w-full md:w-auto flex items-center justify-center transition-colors shadow-lg shadow-blue-600/30">

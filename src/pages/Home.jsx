@@ -15,11 +15,11 @@ const Home = () => {
     <div className="overflow-hidden">
       <Hero />
       <Trust />
-      <FeaturedDomestic />
       <CustomizedPackages />
+      <InternationalPackages />
+      <FeaturedDomestic />
       <WhyChooseUs />
       <Services />
-      <InternationalPackages />
       <BookingRules />
       <Gallery />
       <Testimonials />

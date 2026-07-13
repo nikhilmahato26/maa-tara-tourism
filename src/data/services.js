@@ -74,6 +74,7 @@ export const cancellationPolicy = [
   { days: '30 Days Before', fee: '40%' },
   { days: '20 Days Before', fee: '60%' },
   { days: '7 Days Before', fee: '80%' },
+  { days: 'Within 72 Hours', fee: '100%' },
 ];
 
 export const whyChooseUs = [

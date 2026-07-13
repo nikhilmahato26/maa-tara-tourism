@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { companyInfo } from '../../data/company';
-import logoImg from '../../assets/logo.jpg';
+import logoImg from '../../assets/logo.png';
 
 const Footer = () => {
   return (

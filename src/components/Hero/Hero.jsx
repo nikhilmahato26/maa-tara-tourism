@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Map, Calendar, Users, Search, Globe, ChevronRight } from 'lucide-react';
+import { Map, Users, Search, Globe, ChevronRight } from 'lucide-react';
 import heroBackground from '../../assets/hero_background.png';
 import { customizedPackages, internationalPackages, featuredDomestic } from '../../data/packages';
 
@@ -210,7 +210,6 @@ I'd like to make a booking/inquiry with the following details:
             <div className="bg-slate-50 p-3 rounded-xl border border-gray-100 flex flex-col justify-between md:col-span-4">
               <label className="block text-xs font-semibold text-slate-500 mb-1">Travel Dates</label>
               <div className="flex items-center space-x-2">
-                <Calendar className="w-4 h-4 text-slate-400 shrink-0" />
                 <div className="flex items-center space-x-1 w-full text-slate-700">
                   <input 
                     type="date" 

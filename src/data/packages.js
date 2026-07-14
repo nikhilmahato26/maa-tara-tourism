@@ -28,7 +28,7 @@ export const internationalPackages = [
     title: 'Thailand', 
     subtitle: 'Bangkok, Pattaya', 
     duration: '4 Nights / 5 Days', 
-    price: 25500, 
+    price: 27500, 
     image: beachImg,
     itinerary: 'Bangkok 2 Nights, Pattaya 2 Nights',
     visaAirFareExtra: true
@@ -38,19 +38,19 @@ export const internationalPackages = [
     title: 'Thailand', 
     subtitle: 'Phuket, Pattaya, Bangkok', 
     duration: '6 Nights / 7 Days', 
-    price: 29000, 
+    price: 32500, 
     image: beachImg,
     itinerary: 'Phuket 2 Nights, Pattaya 2 Nights, Bangkok 2 Nights',
     visaAirFareExtra: true
   },
   { 
     id: 3, 
-    title: 'Hong Kong', 
-    subtitle: 'Macau, Disneyland', 
-    duration: '5 Nights / 6 Days', 
-    price: 37500, 
+    title: 'Dubai', 
+    subtitle: 'Dhow Cruise & Dubai Creek Skyline', 
+    duration: '4 Nights / 5 Days', 
+    price: 31999, 
     image: modernCityImg,
-    itinerary: 'Hong Kong 3 Nights, Macau 2 Nights',
+    itinerary: 'Evening Dhow Cruise Ride, Dubai Creek Skyline Views, Buffet Dinner, Half-day Dubai City Tour covering iconic landmarks & cultural heritage, Thrilling Desert Safari with dune bashing - camel ride & live shows, Leisure day to explore Dubai Mall - Aquarium - Ferrari World & more, Shopping - entertainment & modern attractions for a perfect Dubai trip',
     visaAirFareExtra: true
   },
   { 
@@ -58,19 +58,19 @@ export const internationalPackages = [
     title: 'Malaysia & Singapore', 
     subtitle: 'Kuala Lumpur, Singapore', 
     duration: '6 Nights / 7 Days', 
-    price: 48000, 
+    price: 67999, 
     image: modernCityImg,
     itinerary: 'Kuala Lumpur 3 Nights, Singapore 3 Nights',
     visaAirFareExtra: true
   },
   { 
     id: 5, 
-    title: 'Mauritius', 
-    subtitle: 'North, South Tour', 
-    duration: '5 Nights / 6 Days', 
-    price: 46500, 
-    image: beachImg,
-    itinerary: 'Mauritius North, Mauritius South',
+    title: 'Switzerland', 
+    subtitle: '3N Zurich & 3N Paris', 
+    duration: '6 Nights / 7 Days', 
+    price: 126999, 
+    image: snowImg,
+    itinerary: 'Zurich 3 Nights, Paris 3 Nights',
     visaAirFareExtra: true
   },
   { 
@@ -78,7 +78,7 @@ export const internationalPackages = [
     title: 'Sri Lanka', 
     subtitle: 'Exotic Island Tour', 
     duration: '7 Nights / 8 Days', 
-    price: 37000, 
+    price: 54999, 
     image: beachImg,
     itinerary: 'Kandy 2 Nights, Nuwara Eliya 1 Night, Yala 1 Night, Bentota 2 Nights, Colombo 1 Night',
     visaAirFareExtra: true
@@ -88,7 +88,7 @@ export const internationalPackages = [
     title: 'Bangladesh', 
     subtitle: 'Dhaka, Cox\'s Bazar, Rangamati, Chittagong', 
     duration: '7 Nights / 8 Days', 
-    price: 39000, 
+    price: 41999, 
     image: greenHillsImg,
     itinerary: 'Dhaka 3 Nights, Cox Bazar 2 Nights, Rangamati 1 Night, Chhita Gaon 1 Night',
     visaAirFareExtra: true

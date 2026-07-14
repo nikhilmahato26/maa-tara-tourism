@@ -32,3 +32,11 @@
     @apply bg-gradient-to-r from-green-500 to-green-600;
   }
 }
+
+/* Move native calendar picker icon to the left of date text */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  order: -1;
+  margin-left: 0;
+  margin-right: 6px;
+  cursor: pointer;
+}

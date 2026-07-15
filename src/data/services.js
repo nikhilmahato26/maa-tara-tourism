@@ -82,7 +82,7 @@ export const whyChooseUs = [
   'Experienced Tour Planners',
   'Customized Tours',
   'Comfortable Hotels',
-  'Train Booking',
+  'Train Ticket Booking',
   'Air Ticket Booking',
   'Car Rental',
   'Group Tours',

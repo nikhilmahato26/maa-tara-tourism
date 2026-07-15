@@ -17,7 +17,6 @@ export const customizedPackages = [
   { id: 7, title: 'Daringbari', duration: '4 Days', price: 8500, image: 'https://kindspear-mr-suitev2.sgp1.digitaloceanspaces.com/daringbadi-nature-camp/daringbadi-nature-camp/2026/01/22/dji-0860-thumbnail-dd66926e-7756-4fb9-9d1e-a6637b93c475.webp' },
   { id: 8, title: 'Bhitarkanika', duration: '4 Days', price: 8200, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyoq8H_mdji-lHeSGkrNs6_zIgGTYWwjlAsK2rjiV8WAHxqGpWdLWc5uN&s=10' },
   { id: 9, title: 'Silk Route', duration: '5 Days', price: 9200, image: 'https://fusionstays.com/blog/wp-content/uploads/2023/07/silk-route.jpeg' },
-  { id: 10, title: 'Almora', duration: 'Including Ranikhet', price: null, image: 'https://s3.india.com/wp-content/uploads/2024/12/Must-Do-Experiences-In-Almora.jpg' },
   { id: 11, title: 'Sittong & Offbeat', duration: '7 Days', price: 12500, image: 'https://bongtravels.in/wp-content/uploads/2024/11/ahaldhara-sittong-1024x576.jpg' },
   { id: 12, title: 'Ravangla', duration: '7 Days', price: 12500, subtitle: 'Pelling, Richenpong', image: 'https://sikkimdarjeelingtourism.com/wp-content/uploads/2026/03/Ravangla.jpg' },
 ];
@@ -29,7 +28,7 @@ export const internationalPackages = [
     subtitle: 'Bangkok, Pattaya', 
     duration: '4 Nights / 5 Days', 
     price: 27500, 
-    image: beachImg,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrurqngu8jYgT1P3zOm8UBC_gqbWMhiN82Yz0Bt5GkhjpQ-SIcbBXfoSw&s=10',
     itinerary: 'Bangkok 2 Nights, Pattaya 2 Nights',
     visaAirFareExtra: true
   },
@@ -49,7 +48,7 @@ export const internationalPackages = [
     subtitle: 'Dhow Cruise & Dubai Creek Skyline', 
     duration: '4 Nights / 5 Days', 
     price: 31999, 
-    image: modernCityImg,
+    image: 'https://www.burjkhalifa.ae/wp-content/uploads/2024/08/BURJ-KHALIFE-Hero-image-1-min-1.jpg',
     itinerary: 'Evening Dhow Cruise Ride, Dubai Creek Skyline Views, Buffet Dinner, Half-day Dubai City Tour covering iconic landmarks & cultural heritage, Thrilling Desert Safari with dune bashing - camel ride & live shows, Leisure day to explore Dubai Mall - Aquarium - Ferrari World & more, Shopping - entertainment & modern attractions for a perfect Dubai trip',
     visaAirFareExtra: true
   },
@@ -180,7 +179,7 @@ export const featuredDomestic = [
     duration: '16 Days', 
     price: 28000, 
     highlights: 'Forts, Palaces, Desert', 
-    image: palaceImg,
+    image: 'https://s7ap1.scene7.com/is/image/incredibleindia/2-mehrangarh-fort-jodhpur-rajasthan-city-hero?qlt=82&ts=1726660925514',
     itinerary: 'Jaipur 2 Nights, Pushkar 2 Nights covering Ajmer, Udaipur 2 Nights Covering Chittor, Haldighati, Mt. Abu 2 Nights, Jodhpur 1 Night, Jaisalmer 2 Nights Covering Sonar Kellah, Khuri / Sam, Bikaner 1 Night.',
     dates: '12/09, 19/10, 27/12/2025',
     trainFareIncluded: true

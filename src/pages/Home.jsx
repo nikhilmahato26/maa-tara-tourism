@@ -17,9 +17,10 @@ const Home = () => {
       <Hero />
       <Trust />
       <About />
+      <FeaturedDomestic />
       <CustomizedPackages />
       <InternationalPackages />
-      <FeaturedDomestic />
+      
       <WhyChooseUs />
       <Services />
       <BookingRules />

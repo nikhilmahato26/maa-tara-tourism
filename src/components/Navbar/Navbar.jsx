@@ -45,11 +45,11 @@ const Navbar = () => {
 
         {/* Icons & CTA */}
         <div className="hidden lg:flex items-center space-x-6">
-          <div className="flex items-center space-x-4 text-slate-600">
+          {/* <div className="flex items-center space-x-4 text-slate-600">
             <button className="hover:text-blue-600 transition-colors"><Search className="w-5 h-5" /></button>
             <button className="hover:text-blue-600 transition-colors"><Heart className="w-5 h-5" /></button>
             <button className="hover:text-blue-600 transition-colors"><User className="w-5 h-5" /></button>
-          </div>
+          </div> */}
           <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md shadow-blue-600/30">
             Book Now
           </a>

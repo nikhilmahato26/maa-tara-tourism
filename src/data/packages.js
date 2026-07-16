@@ -157,7 +157,7 @@ export const featuredDomestic = [
     duration: '10 Days', 
     price: 31000, 
     highlights: 'Pangong Lake, Nubra Valley', 
-    image: 'https://i0.wp.com/www.wpsholidays.com/wp-content/uploads/2020/06/Untitled.jpg?fit=576%2C400&ssl=1',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLeLu3hPb-tz0AO7eDXCRhx0fB5lWu5bGoI2IcwVc1Q&s=10',
     itinerary: 'Leh 5 Nights, Nubra 2 Nights, Pangong 1 Night, Kargil 1 Night.',
     dates: '15/06, 24/07, 21/09, 03/10/2025',
     trainFareIncluded: true
@@ -168,7 +168,7 @@ export const featuredDomestic = [
     duration: '14 Days', 
     price: 26500, 
     highlights: 'Backwaters, Beaches', 
-    image: 'https://www.mumbaipuneadventures.com/wp-content/uploads/2023/09/kerala-kanyakumari-wallpaper.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgJnr70sqKEcJaQvT9sFsZg5KckQLg7ZjdwJqiFSfBzA&s=10',
     itinerary: 'Kochi 1 Night, Munnar 2 Nights, Kumily 2 Nights, covering Periyar Forest & Spice Garden, Kottayam 1 Night (Kottayam to Alleppey Back Water) Trivandrum 1 Night covering Kovalam Beach, Kanyakumari 2 Nights.',
     dates: '12/09, 22/10, 27/12/25 & 07/01/26',
     trainFareIncluded: true

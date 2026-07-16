@@ -31,7 +31,12 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img src={logoImg} alt="Maa Tara Tourism Logo" className="w-12 h-12 object-contain" />
-          <span className="text-xl md:text-2xl font-extrabold text-blue-900 tracking-tight">Maa Tara Tourism</span>
+          <div className="flex flex-col">
+            <span className="text-xl md:text-2xl font-extrabold text-blue-900 tracking-tight leading-tight">Maa Tara Tourism</span>
+            <span className="text-[9px] md:text-[11px] font-medium text-blue-600 tracking-wider mt-0.5">
+              An ISO 9001 : 2015 Certified Company
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
